@@ -222,44 +222,40 @@
     <section id="about">
         <h2>About</h2>
         <p>
-            Brief introduction about yourself, your research interests, and current position. 
-            Keep it concise - 2-3 sentences is perfect.
+            I conduct rigorous and innovative research on immigration and immigration policy, using causal inference methods and natural language processing techniques to analyze large-scale data from various sources. My goal is to generate new insights and evidence that can inform and improve policy decisions and outcomes in this important and complex domain.
         </p>
     </section>
 
     <section id="research">
         <h2>Research</h2>
 
-        <!-- Paper 1 -->
+        <!-- Paper 1: Policy Tree -->
         <div class="paper">
             <div class="paper-title">
-                <a href="#">Your Paper Title Here</a>
+                <a href="#">Optimal multi-action treatment allocation: A two-phase field experiment to boost immigrant naturalization</a>
             </div>
             <div class="paper-venue">
-                Published in Journal Name, 2024
+                Published in Journal of Applied Econometrics, 2024
             </div>
             <div class="paper-abstract">
-                <strong>Abstract:</strong> Your paper abstract goes here. This should be a concise 
-                summary of your research question, methodology, and key findings. Keep it readable 
-                and accessible.
+                <strong>Abstract:</strong> Research underscores the role of naturalization in enhancing immigrants' socio-economic integration, yet application rates remain low. We estimate a policy rule for a letter-based information campaign encouraging newly eligible immigrants in Zurich, Switzerland, to naturalize. The policy rule assigns one out of three treatment letters to each individual, based on their observed characteristics. We field the policy rule to one-half of 1717 immigrants, while sending random treatment letters to the other half. Despite only moderate treatment effect heterogeneity, the policy tree yields a larger, albeit insignificant, increase in application rates compared with assigning the same letter to everyone.
             </div>
             <div class="paper-links">
-                <a href="#">[PDF]</a>
-                <a href="#">[arXiv]</a>
-                <a href="#">[Code]</a>
+                <a href="https://onlinelibrary.wiley.com/doi/epdf/10.1002/jae.3092">[PDF]</a>
+                <a href="https://journaldata.zbw.eu/dataset/optimal-multi-action-treatment-allocation">[Code]</a>
             </div>
 
             <!-- Figures carousel for this paper -->
             <div class="figures">
                 <div class="figure-carousel" id="carousel1">
                     <div class="figure-container active">
-                        <img src="figures/paper1/figure1.png" alt="Figure 1">
+                        <img src="figures/policytree/fig1.jpg" alt="Figure 1">
                     </div>
                     <div class="figure-container">
-                        <img src="figures/paper1/figure2.png" alt="Figure 2">
+                        <img src="figures/policytree/fig2.jpg" alt="Figure 2">
                     </div>
                     <div class="figure-container">
-                        <img src="figures/paper1/figure3.png" alt="Figure 3">
+                        <img src="figures/policytree/fig3.jpg" alt="Figure 3">
                     </div>
                     
                     <div class="carousel-controls">
@@ -300,17 +296,20 @@
     <section id="contact">
         <h2>Contact</h2>
         <p>
-            Email: your.email@university.edu<br>
-            Office: Building Name, Room Number<br>
-            <a href="https://twitter.com/yourhandle">Twitter</a> | 
+            Email: alessandra.stampi-bombelli@uzh.ch<br>
+            Office: Andreasstrasse 15, 8050 Zurich -- AND 5.74 <br>
             <a href="https://github.com/alessandra-stampi-bombelli">GitHub</a> | 
-            <a href="https://scholar.google.com/citations?user=yourID">Google Scholar</a>
+            <a href="https://www.linkedin.com/in/astampi-bombelli">LinkedIn</a>
         </p>
     </section>
 
-    <footer>
-        <p>© 2024 Alessandra Stampi-Bombelli</p>
-    </footer>
+<footer>
+    <p>© <span id="year"></span> Alessandra Stampi-Bombelli</p>
+</footer>
+
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 
     <script>
         // Carousel functionality
