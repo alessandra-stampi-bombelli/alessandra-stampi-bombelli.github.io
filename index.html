@@ -216,20 +216,17 @@
         .carousel-controls {
             text-align: center;
             margin-top: 15px;
-            display: flex;
-            justify-content: center;
-            gap: 10px;
         }
 
         .carousel-btn {
             background: #f5f5f5;
             border: 1px solid #ddd;
             padding: 8px 15px;
+            margin: 0 5px;
             cursor: pointer;
             font-size: 0.9em;
             border-radius: 3px;
-            white-space: nowrap;
-            flex-shrink: 0;
+            display: inline-block;
         }
 
         .carousel-btn:hover {
@@ -296,7 +293,7 @@
                 </nav>
                 <div class="contact-buttons">
                     <a href="mailto:alessandra.stampi-bombelli@uzh.ch" class="contact-btn-header">✉ Email</a>
-                    <a href="https://www.linkedin.com/in/astampi-bombelli/" class="contact-btn-header">in LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/astampi-bombelli/" class="contact-btn-header">LinkedIn</a>
                 </div>
             </div>
         </div>
@@ -305,7 +302,7 @@
     <section id="about">
         <h2>About</h2>
         <p>
-            I am a Postdoctoral fellow at the University of Zurich. I hold a PhD in Political Economy at ETH Zurich, which I obtained in January 2025. My primary research investigates the political economy of immigrant integration and public policy design, specifically examining gaps between eligibility and take-up in public policy settings, with a focus on naturalization and citizenship access. I combine causal inference methods, such as randomized control trials and quasi-experimental methods, with computational approaches to analyze large-scale administrative data, policy documents, and qualitative text. I aim to uncover these gaps by experimentally testing interventions to reduce them. More broadly, I am interested in questions of social distance, group belonging, and how these psychological and social dimensions shape policy outcomes and intergroup relations. This work bridges research and practice, generating evidence to inform policy while addressing fundamental questions about political inclusion, democratic deficit and belonging.
+            I am a researcher at the University of Zurich. I hold a PhD in Political Economy at ETH Zurich, which I obtained in January 2025. My primary research investigates the political economy of immigrant integration and public policy design, specifically examining gaps between eligibility and take-up in public policy settings, with a focus on naturalization and citizenship access. I combine causal inference methods, such as randomized control trials and quasi-experimental methods, with computational approaches to analyze large-scale administrative data, policy documents, and qualitative text. I aim to uncover these gaps by experimentally testing interventions to reduce them. More broadly, I am interested in questions of social distance, group belonging, and how these psychological and social dimensions shape policy outcomes and intergroup relations. This work bridges research and practice, generating evidence to inform policy while addressing fundamental questions about political inclusion, democratic deficit and belonging.
         </p>
         <p style="margin-top: 15px;">
             My research is funded by the <a href="https://data.snf.ch/grants/grant/218258" style="color: #0066cc; text-decoration: none;">Swiss National Science Foundation</a>. I am a research affiliate at the <a href="https://immigrationlab.org/our-team/alessandra-stampi-bombelli/" style="color: #0066cc; text-decoration: none;">Immigration Policy Lab</a> at ETH Zurich and Stanford University, the <a href="https://pp.ethz.ch/people/alessandra-stampi-bombelli.html" style="color: #0066cc; text-decoration: none;">Public Policy Group</a> and the <a href="https://lawecon.ethz.ch/" style="color: #0066cc; text-decoration: none;">Group for Law, Economics and Data Science</a> at ETH Zurich. During my PhD, I was a visiting fellow at the <a href="https://www.eui.eu/en/home" style="color: #0066cc; text-decoration: none;">European University Institute</a>.
@@ -342,16 +339,16 @@
             <div class="figures">
                 <div class="figure-carousel" id="carousel1">
                     <div class="figure-container active">
-                        <img src="figures/policytree/fig_design.png" alt="Figure 1: Experimental Design">
-                        <div class="figure-caption">Experimental design and measurement timeline. Panel A summarizes Study 1, which randomized 11,168 newly eligible immigrants to receive the bundled outreach letter in October 2019 or May 2020. Study 1 also included a separate survey-invitation randomization, with about 2,000 immigrants assigned to a survey holdout. Panel B summarizes Study 2, which randomized 5,145 newly eligible immigrants across three early treatment arms and a delayed control group.</div>
+                        <img src="figures/policytree/fig_design.png" alt="Figure 1">
+                        <div class="figure-caption">Illustrative examples of policy rules with different functional forms. The figure shows three examples of policy rules that assign treatments based on two covariates. Panels show quadrant policy rule, linear policy rule, and policy tree with three treatment options.</div>
                     </div>
                     <div class="figure-container">
-                        <img src="figures/policytree/fig4.png" alt="Figure 2: Treatment Effects">
-                        <div class="figure-caption">Study 1 and Study 2: effects of the interventions on naturalization application rates. Vertical bars represent the proportion of participants who applied for naturalization in the City of Zurich within seven months from the start of each experiment, with 95% confidence intervals. Study 1 (N=11,168) consisted of a bundled informational letter sent by the City of Zurich. Study 2 (N=4,871 in the analysis sample) consisted of three separate treatments targeting eligibility uncertainty (Eligibility Letter), perceived exclusion (Inclusion Letter), and procedural complexity (Process Letter).</div>
+                        <img src="figures/policytree/fig4.png" alt="Figure 2">
+                        <div class="figure-caption">Average and conditional average treatment effects by nationality and years of residence in Switzerland. Treatment effects are estimated using a multi-arm causal forest.</div>
                     </div>
                     <div class="figure-container">
-                        <img src="figures/policytree/fig5.png" alt="Figure 3: Mechanisms">
-                        <div class="figure-caption">Study 1 and Study 2: effects of the interventions on self-reported naturalization barriers. Letter (Wave 1) and Letter (Wave 2) report the short- and medium-term effects of Study 1's bundled informational letter. Study 2 consisted of three separate treatments targeting eligibility uncertainty (Eligibility Letter), perceived exclusion (Inclusion Letter), and procedural complexity (Process Letter). Outcomes for Study 2 are measured as within-individual change between the endline and baseline survey. Horizontal lines represent 90% and 95% confidence intervals.</div>
+                        <img src="figures/policytree/fig5.png" alt="Figure 3">
+                        <div class="figure-caption">Fitted policy tree. The figure shows the policy tree fitted to data from wave 1. The numbers at the bottom indicate the number of individuals assigned to each terminal node in the training sample and in Group B.</div>
                     </div>
                     
                     <div class="carousel-controls">
@@ -390,29 +387,18 @@
                 <div style="display: flex; gap: 20px; margin: 20px 0; justify-content: center;">
                     <div style="flex: 1; text-align: center; max-width: 45%;">
                         <img src="figures/socialdistance/top_native_words_0_5_100k_5.png" alt="Native Words" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px;">
-                        <div class="figure-caption">Semantic poles for "Native" in newspaper language</div>
+                        <div class="figure-caption">Semantic poles for "Native"</div>
                     </div>
                     <div style="flex: 1; text-align: center; max-width: 45%;">
                         <img src="figures/socialdistance/top_immigrant_words_0_5_100k_5.png" alt="Immigrant Words" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px;">
-                        <div class="figure-caption">Semantic poles for "Immigrant" in newspaper language</div>
+                        <div class="figure-caption">Semantic poles for "Immigrant"</div>
                     </div>
                 </div>
 
-                <!-- Dynamics figure carousel -->
-                <div class="figure-carousel" id="carousel2">
-                    <div class="figure-container active">
-                        <img src="figures/socialdistance/dynamics.png" alt="Figure 3: Dynamics">
-                        <div class="figure-caption">Dynamics of social distance over time. Coefficients represent effects of leads or lags of the instrument variable on social distance, with 95% confidence intervals. Regressions control for lagged social distance, log lagged county population, and include decade and county fixed effects as well as county interacted with time trends. Standard errors clustered at county level.</div>
-                    </div>
-                    
-                    <div class="carousel-controls">
-                        <button class="carousel-btn" onclick="changeSlide('carousel2', -1)">❮ Previous</button>
-                        <button class="carousel-btn" onclick="changeSlide('carousel2', 1)">Next ❯</button>
-                    </div>
-                    
-                    <div class="carousel-dots" id="carousel2-dots">
-                        <span class="dot active" onclick="currentSlide('carousel2', 0)"></span>
-                    </div>
+                <!-- Dynamics figure below -->
+                <div style="text-align: center; margin: 20px 0;">
+                    <img src="figures/socialdistance/dynamics.png" alt="Dynamics" style="max-width: 65%; height: auto; border: 1px solid #ddd; border-radius: 4px; margin: 0 auto; display: block;">
+                    <div class="figure-caption">Dynamics of social distance over time</div>
                 </div>
             </div>
         </div>
