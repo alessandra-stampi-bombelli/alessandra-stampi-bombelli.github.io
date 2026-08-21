@@ -267,12 +267,78 @@
             }
 
             h1 {
-                font-size: 1.6em;
+                font-size: 1.5em;
+            }
+
+            h2 {
+                font-size: 1.3em;
+            }
+
+            h3 {
+                font-size: 1.2em;
+            }
+
+            header > div {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            header img {
+                width: 150px;
+                height: 150px;
+                align-self: center;
+            }
+
+            nav {
+                margin-top: 15px;
             }
 
             nav a {
-                display: block;
-                margin: 10px 0;
+                display: inline-block;
+                margin-right: 15px;
+                margin-bottom: 10px;
+                font-size: 0.9em;
+            }
+
+            .contact-buttons {
+                margin-top: 10px;
+                gap: 8px;
+                flex-direction: column;
+            }
+
+            .contact-btn-header {
+                width: 100%;
+                padding: 8px 12px;
+                font-size: 0.85em;
+                text-align: center;
+            }
+
+            .paper {
+                margin-bottom: 30px;
+            }
+
+            .paper-title {
+                font-size: 1.1em;
+            }
+
+            .figure-container img {
+                max-width: 90%;
+            }
+
+            .carousel-btn {
+                padding: 6px 12px;
+                font-size: 0.85em;
+                margin: 0 3px;
+            }
+
+            .dot {
+                height: 8px;
+                width: 8px;
+                margin: 0 3px;
+            }
+
+            .carousel-dots {
+                margin-top: 10px;
             }
         }
     </style>
@@ -305,7 +371,7 @@
             I am a researcher at the University of Zurich. I hold a PhD in Political Economy at ETH Zurich, which I obtained in January 2025. My primary research investigates the political economy of immigrant integration and public policy design, specifically examining gaps between eligibility and take-up in public policy settings, with a focus on naturalization and citizenship access. I combine causal inference methods, such as randomized control trials and quasi-experimental methods, with computational approaches to analyze large-scale administrative data, policy documents, and qualitative text. I aim to uncover these gaps by experimentally testing interventions to reduce them. More broadly, I am interested in questions of social distance, group belonging, and how these psychological and social dimensions shape policy outcomes and intergroup relations. This work bridges research and practice, generating evidence to inform policy while addressing fundamental questions about political inclusion, democratic deficit and belonging.
         </p>
         <p style="margin-top: 15px;">
-            My research is funded by the <a href="https://data.snf.ch/grants/grant/218258" style="color: #0066cc; text-decoration: none;">Swiss National Science Foundation</a>. I am a research affiliate at the <a href="https://immigrationlab.org/our-team/alessandra-stampi-bombelli/" style="color: #0066cc; text-decoration: none;">Immigration Policy Lab</a> at ETH Zurich and Stanford University, the <a href="https://pp.ethz.ch/people/alessandra-stampi-bombelli.html" style="color: #0066cc; text-decoration: none;">Public Policy Group</a> and the <a href="https://lawecon.ethz.ch/" style="color: #0066cc; text-decoration: none;">Group for Law, Economics and Data Science</a> at ETH Zurich. During my PhD, I was a visiting fellow at the <a href="https://www.eui.eu/en/home" style="color: #0066cc; text-decoration: none;">European University Institute</a>.
+            My research is funded by the <a href="https://data.snf.ch/grants/grant/218258" style="color: #0066cc; text-decoration: none;" target="_blank" rel="noopener noreferrer">Swiss National Science Foundation</a>. I am a research affiliate at the <a href="https://immigrationlab.org/our-team/alessandra-stampi-bombelli/" style="color: #0066cc; text-decoration: none;" target="_blank" rel="noopener noreferrer">Immigration Policy Lab</a> at ETH Zurich and Stanford University, the <a href="https://pp.ethz.ch/people/alessandra-stampi-bombelli.html" style="color: #0066cc; text-decoration: none;" target="_blank" rel="noopener noreferrer">Public Policy Group</a> and the <a href="https://lawecon.ethz.ch/" style="color: #0066cc; text-decoration: none;" target="_blank" rel="noopener noreferrer">Group for Law, Economics and Data Science</a> at ETH Zurich. During my PhD, I was a visiting fellow at the <a href="https://www.eui.eu/en/home" style="color: #0066cc; text-decoration: none;" target="_blank" rel="noopener noreferrer">European University Institute</a>.
         </p>
     </section>
 
@@ -318,7 +384,7 @@
         <!-- Paper 1: Policy Tree -->
         <div class="paper">
             <div class="paper-title">
-                <a href="https://onlinelibrary.wiley.com/doi/10.1002/jae.3092">Optimal multi-action treatment allocation: A two-phase field experiment to boost immigrant naturalization</a>
+                <a href="https://onlinelibrary.wiley.com/doi/10.1002/jae.3092" target="_blank" rel="noopener noreferrer">Optimal multi-action treatment allocation: A two-phase field experiment to boost immigrant naturalization</a>
             </div>
             <div class="paper-authors">
                 with Achim Ahrens, Selina Kurer, and Dominik Hangartner
@@ -331,8 +397,8 @@
                 <strong>Abstract:</strong> Research underscores the role of naturalization in enhancing immigrants' socio-economic integration, yet application rates remain low. We estimate a policy rule for a letter-based information campaign encouraging newly eligible immigrants in Zurich, Switzerland, to naturalize. The policy rule assigns one out of three treatment letters to each individual, based on their observed characteristics. We field the policy rule to one-half of 1717 immigrants, while sending random treatment letters to the other half. Despite only moderate treatment effect heterogeneity, the policy tree yields a larger, albeit insignificant, increase in application rates compared with assigning the same letter to everyone.
             </div>
             <div class="paper-links">
-                <a href="https://onlinelibrary.wiley.com/doi/epdf/10.1002/jae.3092">[PDF]</a>
-                <a href="https://journaldata.zbw.eu/dataset/optimal-multi-action-treatment-allocation">[Code]</a>
+                <a href="https://onlinelibrary.wiley.com/doi/epdf/10.1002/jae.3092" target="_blank" rel="noopener noreferrer">[PDF]</a>
+                <a href="https://journaldata.zbw.eu/dataset/optimal-multi-action-treatment-allocation" target="_blank" rel="noopener noreferrer">[Code]</a>
             </div>
 
             <!-- Figures carousel for this paper -->
@@ -433,6 +499,11 @@
             <!-- Figures carousel for this paper -->
             <div class="figures">
                 <div class="figure-carousel" id="carousel3">
+                    <div class="carousel-controls" style="margin-bottom: 15px;">
+                        <button class="carousel-btn" onclick="changeSlide('carousel3', -1)">❮ Previous</button>
+                        <button class="carousel-btn" onclick="changeSlide('carousel3', 1)">Next ❯</button>
+                    </div>
+                    
                     <div class="figure-container active">
                         <img src="figures/welcome/fig_design.png" alt="Figure 1: Design">
                         <div class="figure-caption">Experimental design and measurement timeline. Panel A summarizes Study 1, which randomized 11,168 newly eligible immigrants. Panel B summarizes Study 2, which randomized 5,145 newly eligible immigrants across three early treatment arms and a delayed control group.</div>
@@ -446,12 +517,7 @@
                         <div class="figure-caption">Study 1 and Study 2: effects of the interventions on self-reported naturalization barriers. Outcomes for Study 2 are measured as within-individual change between endline and baseline survey. Horizontal lines represent 90% and 95% confidence intervals.</div>
                     </div>
                     
-                    <div class="carousel-controls">
-                        <button class="carousel-btn" onclick="changeSlide('carousel3', -1)">❮ Previous</button>
-                        <button class="carousel-btn" onclick="changeSlide('carousel3', 1)">Next ❯</button>
-                    </div>
-                    
-                    <div class="carousel-dots" id="carousel3-dots">
+                    <div class="carousel-dots" id="carousel3-dots" style="margin-top: 15px;">
                         <span class="dot active" onclick="currentSlide('carousel3', 0)"></span>
                         <span class="dot" onclick="currentSlide('carousel3', 1)"></span>
                         <span class="dot" onclick="currentSlide('carousel3', 2)"></span>
@@ -498,7 +564,7 @@
         <p>
             Email: alessandra.stampi-bombelli@uzh.ch<br>
             Office: AND 5.74, Andreasstrasse 15, 8050 Zurich<br>
-            <a href="https://www.linkedin.com/in/astampi-bombelli/">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/astampi-bombelli/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </p>
     </section>
 
