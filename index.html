@@ -293,7 +293,7 @@
                 </nav>
                 <div class="contact-buttons">
                     <a href="mailto:alessandra.stampi-bombelli@uzh.ch" class="contact-btn-header">✉ Email</a>
-                    <a href="https://www.linkedin.com/in/astampi-bombelli/" class="contact-btn-header">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/astampi-bombelli/" class="contact-btn-header" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                 </div>
             </div>
         </div>
@@ -338,25 +338,25 @@
             <!-- Figures carousel for this paper -->
             <div class="figures">
                 <div class="figure-carousel" id="carousel1">
-                    <div class="figure-container active">
-                        <img src="figures/policytree/fig_design.png" alt="Figure 1">
-                        <div class="figure-caption">Illustrative examples of policy rules with different functional forms. The figure shows three examples of policy rules that assign treatments based on two covariates. Panels show quadrant policy rule, linear policy rule, and policy tree with three treatment options.</div>
-                    </div>
-                    <div class="figure-container">
-                        <img src="figures/policytree/fig4.png" alt="Figure 2">
-                        <div class="figure-caption">Average and conditional average treatment effects by nationality and years of residence in Switzerland. Treatment effects are estimated using a multi-arm causal forest.</div>
-                    </div>
-                    <div class="figure-container">
-                        <img src="figures/policytree/fig5.png" alt="Figure 3">
-                        <div class="figure-caption">Fitted policy tree. The figure shows the policy tree fitted to data from wave 1. The numbers at the bottom indicate the number of individuals assigned to each terminal node in the training sample and in Group B.</div>
-                    </div>
-                    
-                    <div class="carousel-controls">
+                    <div class="carousel-controls" style="margin-bottom: 15px;">
                         <button class="carousel-btn" onclick="changeSlide('carousel1', -1)">❮ Previous</button>
                         <button class="carousel-btn" onclick="changeSlide('carousel1', 1)">Next ❯</button>
                     </div>
                     
-                    <div class="carousel-dots" id="carousel1-dots">
+                    <div class="figure-container active">
+                        <img src="figures/policytree/fig1.jpg" alt="Figure 1">
+                        <div class="figure-caption">Illustrative examples of policy rules with different functional forms. The figure shows three examples of policy rules that assign treatments based on two covariates. Panels show quadrant policy rule, linear policy rule, and policy tree with three treatment options.</div>
+                    </div>
+                    <div class="figure-container">
+                        <img src="figures/policytree/fig2.jpg" alt="Figure 2">
+                        <div class="figure-caption">Average and conditional average treatment effects by nationality and years of residence in Switzerland. Treatment effects are estimated using a multi-arm causal forest.</div>
+                    </div>
+                    <div class="figure-container">
+                        <img src="figures/policytree/fig3.jpg" alt="Figure 3">
+                        <div class="figure-caption">Fitted policy tree. The figure shows the policy tree fitted to data from wave 1. The numbers at the bottom indicate the number of individuals assigned to each terminal node in the training sample and in Group B.</div>
+                    </div>
+                    
+                    <div class="carousel-dots" id="carousel1-dots" style="margin-top: 15px;">
                         <span class="dot active" onclick="currentSlide('carousel1', 0)"></span>
                         <span class="dot" onclick="currentSlide('carousel1', 1)"></span>
                         <span class="dot" onclick="currentSlide('carousel1', 2)"></span>
@@ -381,24 +381,38 @@
                 <strong>Abstract:</strong> A constant of human history is the migration of people in search of a better future. How does the arrival of new immigrants affect the perception of outgroup distance among the native majority group? We provide evidence in the context of the Age of Mass Migration (U.S., 1860-1920). Applying computational linguistics techniques to a newly processed corpus of over 1.8 million newspaper issues (9 million pages) published by 3,675 local outlets in that period, we present and validate a novel text-based measure of perceived social distance between U.S.-born natives and 21 immigrant groups. Using a shift-share instrument for source-specific migrant in-flows, we show that an increase in immigration is associated with higher social distance toward a group, as expressed in local newspapers.
             </div>
 
-            <!-- Figures for this paper -->
+            <!-- Figures carousel for this paper -->
             <div class="figures">
-                <!-- Side-by-side word clouds -->
-                <div style="display: flex; gap: 20px; margin: 20px 0; justify-content: center;">
-                    <div style="flex: 1; text-align: center; max-width: 45%;">
-                        <img src="figures/socialdistance/top_native_words_0_5_100k_5.png" alt="Native Words" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px;">
-                        <div class="figure-caption">Semantic poles for "Native"</div>
+                <div class="figure-carousel" id="carousel2">
+                    <div class="carousel-controls" style="margin-bottom: 15px;">
+                        <button class="carousel-btn" onclick="changeSlide('carousel2', -1)">❮ Previous</button>
+                        <button class="carousel-btn" onclick="changeSlide('carousel2', 1)">Next ❯</button>
                     </div>
-                    <div style="flex: 1; text-align: center; max-width: 45%;">
-                        <img src="figures/socialdistance/top_immigrant_words_0_5_100k_5.png" alt="Immigrant Words" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px;">
-                        <div class="figure-caption">Semantic poles for "Immigrant"</div>
+                    
+                    <!-- First carousel item: side-by-side word clouds -->
+                    <div class="figure-container active">
+                        <div style="display: flex; gap: 20px; justify-content: center;">
+                            <div style="flex: 1; text-align: center; max-width: 45%;">
+                                <img src="figures/socialdistance/top_native_words_0_5_100k_5.png" alt="Native Words" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px;">
+                                <div class="figure-caption">Semantic poles for "Native"</div>
+                            </div>
+                            <div style="flex: 1; text-align: center; max-width: 45%;">
+                                <img src="figures/socialdistance/top_immigrant_words_0_5_100k_5.png" alt="Immigrant Words" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px;">
+                                <div class="figure-caption">Semantic poles for "Immigrant"</div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-                <!-- Dynamics figure below -->
-                <div style="text-align: center; margin: 20px 0;">
-                    <img src="figures/socialdistance/dynamics.png" alt="Dynamics" style="max-width: 65%; height: auto; border: 1px solid #ddd; border-radius: 4px; margin: 0 auto; display: block;">
-                    <div class="figure-caption">Dynamics of social distance over time</div>
+                    
+                    <!-- Second carousel item: dynamics -->
+                    <div class="figure-container">
+                        <img src="figures/socialdistance/dynamics.png" alt="Dynamics" style="max-width: 65%; height: auto; border: 1px solid #ddd; border-radius: 4px; margin: 0 auto; display: block;">
+                        <div class="figure-caption">Dynamics of social distance over time</div>
+                    </div>
+                    
+                    <div class="carousel-dots" id="carousel2-dots" style="margin-top: 15px;">
+                        <span class="dot active" onclick="currentSlide('carousel2', 0)"></span>
+                        <span class="dot" onclick="currentSlide('carousel2', 1)"></span>
+                    </div>
                 </div>
             </div>
         </div>
