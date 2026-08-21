@@ -65,6 +65,14 @@
             padding-bottom: 10px;
         }
 
+        h3 {
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            color: #222;
+        }
+
         .paper {
             margin-bottom: 40px;
             padding-bottom: 40px;
@@ -78,7 +86,7 @@
         .paper-title {
             font-size: 1.3em;
             font-weight: 600;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
             color: #111;
         }
 
@@ -89,6 +97,13 @@
 
         .paper-title a:hover {
             color: #0066cc;
+        }
+
+        .paper-authors {
+            color: #666;
+            font-size: 0.95em;
+            margin-bottom: 10px;
+            font-style: italic;
         }
 
         .paper-venue {
@@ -139,10 +154,19 @@
         }
 
         .figure-container img {
-            max-width: 100%;
+            max-width: 80%;
             height: auto;
             border: 1px solid #ddd;
             border-radius: 4px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .figure-caption {
+            font-size: 0.85em;
+            color: #666;
+            margin-top: 10px;
+            text-align: center;
         }
 
         .carousel-controls {
@@ -211,10 +235,11 @@
 <body>
     <header>
         <h1>Alessandra Stampi-Bombelli</h1>
-        <p class="subtitle">PhD Candidate in [Your Field] at [Your University]</p>
+        <p class="subtitle">Postdoc and Research Manager at the University of Zurich</p>
         <nav>
             <a href="#about">About</a>
             <a href="#research">Research</a>
+            <a href="#">CV</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
@@ -229,13 +254,19 @@
     <section id="research">
         <h2>Research</h2>
 
+        <!-- PUBLICATIONS -->
+        <h3>Publications</h3>
+
         <!-- Paper 1: Policy Tree -->
         <div class="paper">
             <div class="paper-title">
-                <a href="#">Optimal multi-action treatment allocation: A two-phase field experiment to boost immigrant naturalization</a>
+                <a href="https://onlinelibrary.wiley.com/doi/10.1002/jae.3092">Optimal multi-action treatment allocation: A two-phase field experiment to boost immigrant naturalization</a>
+            </div>
+            <div class="paper-authors">
+                with Achim Ahrens, Selina Kurer, and Dominik Hangartner
             </div>
             <div class="paper-venue">
-                Published in Journal of Applied Econometrics, 2024
+                Journal of Applied Econometrics, 2024
             </div>
             <div class="paper-abstract">
                 <strong>Abstract:</strong> Research underscores the role of naturalization in enhancing immigrants' socio-economic integration, yet application rates remain low. We estimate a policy rule for a letter-based information campaign encouraging newly eligible immigrants in Zurich, Switzerland, to naturalize. The policy rule assigns one out of three treatment letters to each individual, based on their observed characteristics. We field the policy rule to one-half of 1717 immigrants, while sending random treatment letters to the other half. Despite only moderate treatment effect heterogeneity, the policy tree yields a larger, albeit insignificant, increase in application rates compared with assigning the same letter to everyone.
@@ -249,13 +280,16 @@
             <div class="figures">
                 <div class="figure-carousel" id="carousel1">
                     <div class="figure-container active">
-                        <img src="figures/policytree/fig1.jpg" alt="Figure 1">
+                        <img src="figures/policytree/fig_design.png" alt="Figure 1: Experimental Design">
+                        <div class="figure-caption">Experimental design and measurement timeline</div>
                     </div>
                     <div class="figure-container">
-                        <img src="figures/policytree/fig2.jpg" alt="Figure 2">
+                        <img src="figures/policytree/fig4.png" alt="Figure 2: Treatment Effects">
+                        <div class="figure-caption">Effects on naturalization application rates</div>
                     </div>
                     <div class="figure-container">
-                        <img src="figures/policytree/fig3.jpg" alt="Figure 3">
+                        <img src="figures/policytree/fig5.png" alt="Figure 3: Mechanisms">
+                        <div class="figure-caption">Effects on barriers and mechanisms</div>
                     </div>
                     
                     <div class="carousel-controls">
@@ -272,44 +306,139 @@
             </div>
         </div>
 
-        <!-- Paper 2 - Working Paper -->
+        <!-- WORKING PAPERS -->
+        <h3>Working Papers</h3>
+
+        <!-- Paper 2: Social Distance Newspapers -->
         <div class="paper">
             <div class="paper-title">
-                Second Paper Title
+                Immigration and Social Distance: Evidence from Newspapers during the Age of Mass Migration
             </div>
-            <div class="paper-venue">
-                Working Paper
+            <div class="paper-authors">
+                with Gloria Gennaro, Anton Boltachka, Elliott Ash, and Dominik Hangartner
             </div>
             <div class="paper-abstract">
-                <strong>Abstract:</strong> Another paper abstract. You can add as many papers as you want 
-                by copying the paper div structure.
+                <strong>Abstract:</strong> A constant of human history is the migration of people in search of a better future. How does the arrival of new immigrants affect the perception of outgroup distance among the native majority group? We provide evidence in the context of the Age of Mass Migration (U.S., 1860-1920). Applying computational linguistics techniques to a newly processed corpus of over 1.8 million newspaper issues (9 million pages) published by 3,675 local outlets in that period, we present and validate a novel text-based measure of perceived social distance between U.S.-born natives and 21 immigrant groups. Using a shift-share instrument for source-specific migrant in-flows, we show that an increase in immigration is associated with higher social distance toward a group, as expressed in local newspapers.
             </div>
-            <div class="paper-links">
-                <a href="#">[PDF]</a>
-                <a href="#">[Slides]</a>
+
+            <!-- Figures carousel for this paper -->
+            <div class="figures">
+                <div class="figure-carousel" id="carousel2">
+                    <div class="figure-container active">
+                        <img src="figures/socialdistance/top_native_words_0_5_100k_5__1_.png" alt="Figure 1: Native Words">
+                        <div class="figure-caption">Semantic poles for "Native" in newspaper language</div>
+                    </div>
+                    <div class="figure-container">
+                        <img src="figures/socialdistance/top_immigrant_words_0_5_100k_5__1_.png" alt="Figure 2: Immigrant Words">
+                        <div class="figure-caption">Semantic poles for "Immigrant" in newspaper language</div>
+                    </div>
+                    <div class="figure-container">
+                        <img src="figures/socialdistance/dynamics.png" alt="Figure 3: Dynamics">
+                        <div class="figure-caption">Dynamics of social distance over time. Coefficients represent effects of leads or lags of the instrument variable on social distance, with 95% confidence intervals. Regressions control for lagged social distance, log lagged county population, and include decade and county fixed effects as well as county interacted with time trends. Standard errors clustered at county level.</div>
+                    </div>
+                    
+                    <div class="carousel-controls">
+                        <button class="carousel-btn" onclick="changeSlide('carousel2', -1)">❮ Previous</button>
+                        <button class="carousel-btn" onclick="changeSlide('carousel2', 1)">Next ❯</button>
+                    </div>
+                    
+                    <div class="carousel-dots" id="carousel2-dots">
+                        <span class="dot active" onclick="currentSlide('carousel2', 0)"></span>
+                        <span class="dot" onclick="currentSlide('carousel2', 1)"></span>
+                        <span class="dot" onclick="currentSlide('carousel2', 2)"></span>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- Add more papers as needed -->
+        <!-- Paper 3: Welcome and Naturalization -->
+        <div class="paper">
+            <div class="paper-title">
+                From Formal Eligibility to Political Membership: Information, Welcome, and Immigrant Naturalization
+            </div>
+            <div class="paper-authors">
+                with Dominik Hangartner, Selina Kurer, Joëlle Pianzola, and Dalston Ward
+            </div>
+            <div class="paper-abstract">
+                <strong>Abstract:</strong> A large literature shows that naturalization can generate economic, political, and social gains, yet many immigrants who satisfy formal requirements do not apply. We argue that eligibility alone is insufficient to generate take-up: immigrants may be uncertain that they qualify, doubt that applying is welcome, or view the process as difficult. We test this in two preregistered experiments in Zurich, Switzerland, linking outreach to administrative records and panel surveys. In Study 1, a bundled letter increased applications by 41% (95% CI: 23%, 59%). Study 2 decomposed this intervention: messages targeting eligibility uncertainty and perceived exclusion increased applications by 69% (95% CI: 31%, 106%) and 63% (95% CI: 26%, 100%), respectively, while a message targeting procedural complexity had weaker effects. Survey evidence shows corresponding shifts in eligibility knowledge and perceived inclusion, suggesting that a sense of welcome is not only an outcome of naturalization but also one of its inputs.
+            </div>
+
+            <!-- Figures carousel for this paper -->
+            <div class="figures">
+                <div class="figure-carousel" id="carousel3">
+                    <div class="figure-container active">
+                        <img src="figures/welcome/fig_design.png" alt="Figure 1: Design">
+                        <div class="figure-caption">Experimental design and measurement timeline. Panel A summarizes Study 1, which randomized 11,168 newly eligible immigrants. Panel B summarizes Study 2, which randomized 5,145 newly eligible immigrants across three early treatment arms and a delayed control group.</div>
+                    </div>
+                    <div class="figure-container">
+                        <img src="figures/welcome/fig4.png" alt="Figure 2: Effects">
+                        <div class="figure-caption">Study 1 and Study 2: effects of the interventions on naturalization application rates. Vertical bars represent the proportion of participants who applied for naturalization within seven months from the start of each experiment, with 95% confidence intervals.</div>
+                    </div>
+                    <div class="figure-container">
+                        <img src="figures/welcome/fig5.png" alt="Figure 3: Mechanisms">
+                        <div class="figure-caption">Study 1 and Study 2: effects of the interventions on self-reported naturalization barriers. Outcomes for Study 2 are measured as within-individual change between endline and baseline survey. Horizontal lines represent 90% and 95% confidence intervals.</div>
+                    </div>
+                    
+                    <div class="carousel-controls">
+                        <button class="carousel-btn" onclick="changeSlide('carousel3', -1)">❮ Previous</button>
+                        <button class="carousel-btn" onclick="changeSlide('carousel3', 1)">Next ❯</button>
+                    </div>
+                    
+                    <div class="carousel-dots" id="carousel3-dots">
+                        <span class="dot active" onclick="currentSlide('carousel3', 0)"></span>
+                        <span class="dot" onclick="currentSlide('carousel3', 1)"></span>
+                        <span class="dot" onclick="currentSlide('carousel3', 2)"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- WORK IN PROGRESS -->
+        <h3>Work in Progress</h3>
+
+        <!-- Paper 4: PassBot -->
+        <div class="paper">
+            <div class="paper-title">
+                Understanding Barriers to Naturalization Among Immigrants: Evidence from a Randomized Field Experiment in Germany
+            </div>
+            <div class="paper-authors">
+                with Giuseppe Pietrantuono and Dominik Hangartner
+            </div>
+            <div class="paper-abstract">
+                <strong>Abstract:</strong> Germany's 2024 reform of the Nationality Act, introducing dual citizenship and shorter residency requirements, triggered a rise in naturalization applications. Yet a large share of eligible immigrants still has not applied, suggesting that barriers beyond legal eligibility persist. We conduct a randomized controlled trial to test whether a targeted intervention can help close this gap. We draw a sample of approximately 170,000 third-country nationals from the Central Register of Foreigners (AZR) who meet the residency requirement for citizenship and had not acquired German citizenship at the time of sampling. Participants who filled in a baseline survey are randomly assigned to a treatment arm or a silent control group. The treatment targets the informational barrier to naturalization through a custom-made, AI-powered RAG chatbot, named "PassBot". PassBot is built to provide interactive, multilingual guidance (German, English, Arabic, Turkish) on the naturalization process, designed to reduce the informational and psychological costs of navigating the application process. Our primary outcome is self-reported naturalization application and citizenship acquisition; we are additionally pursuing access to administrative records from BAMF. To investigate heterogeneous treatment effects, we apply the generic machine learning framework of Chernozhukov et al. (2025) alongside pre-specified subgroup analyses. In December 2026, we will field the follow-up wave of the survey to all respondents, allowing to test the main hypotheses on naturalization uptake and barriers.
+            </div>
+        </div>
+
+        <!-- Paper 5: Targeted Outreach -->
+        <div class="paper">
+            <div class="paper-title">
+                Targeted Outreach and Citizenship Take-Up: Experimental Evidence from a Two-Phase Field Experiment in Switzerland
+            </div>
+            <div class="paper-authors">
+                with Michelle Acampora, Selina Kurer, and Dominik Hangartner
+            </div>
+            <div class="paper-abstract">
+                <strong>Abstract:</strong> Against the backdrop of low take-up of public programs and services, governments increasingly personalize outreach to expand access and participation. Yet the barriers to take-up often differ across eligible individuals and are only partly observable to policymakers. We ask whether governments should use administrative data to predict the most effective information for each recipient, or instead offer a structured menu that lets recipients choose the information they need. We study this question in a two-phase field experiment with the City of Zurich involving immigrants who had recently become eligible for Swiss citizenship. Phase 1 randomly assigns 12,699 individuals to one of four barrier-specific leaflet treatments or to a no-outreach control group. The leaflets address process complexity, documentation requirements, institutional support, and the benefits of citizenship. Relative to a 6.9 percent control mean over the roughly six-month outcome window, all four treatments increase naturalization applications by similar magnitudes, with effects of up to 3.6 percentage points. Phase 2 re-randomizes the 3,878 Phase 1 control-group members who had not yet applied to compare two scalable personalization strategies. The data-driven strategy assigns recipients the leaflet predicted to be most effective using machine-learning estimates from Phase 1; the user-driven strategy sends a structured menu that lets recipients access any combination of the four leaflets. Over the five-month outcome window, both strategies significantly increase applications, by 3.2 and 2.6 percentage points, respectively, relative to a 2.9 percent control mean. The 0.6 percentage-point difference between the two strategies is not statistically significant. Over the full 15-month observation window, cumulative application patterns suggest that the treatments generate persistent increases rather than merely accelerate applications. In the user-driven arm, 20 percent of recipients access at least one leaflet; among those who do, 55 percent access more than one. These findings suggest that guided self-selection into information can be an effective alternative to algorithmic targeting when barriers are multidimensional, heterogeneous, partially unobserved, and may evolve over time.
+            </div>
+        </div>
+
     </section>
 
     <section id="contact">
         <h2>Contact</h2>
         <p>
             Email: alessandra.stampi-bombelli@uzh.ch<br>
-            Office: Andreasstrasse 15, 8050 Zurich -- AND 5.74 <br>
-            <a href="https://github.com/alessandra-stampi-bombelli">GitHub</a> | 
-            <a href="https://www.linkedin.com/in/astampi-bombelli">LinkedIn</a>
+            Office: AND 5.74, Andreasstrasse 15, 8050 Zurich
         </p>
     </section>
 
-<footer>
-    <p>© <span id="year"></span> Alessandra Stampi-Bombelli</p>
-</footer>
+    <footer>
+        <p>© <span id="year"></span> Alessandra Stampi-Bombelli</p>
+    </footer>
 
-<script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 
     <script>
         // Carousel functionality
