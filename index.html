@@ -568,6 +568,50 @@
         </p>
     </section>
 
+    <section id="other-activities">
+        <h2>Other Activities</h2>
+        <p>
+            Ortoloco, an agricultural cooperative in Zurich, has been central to my life since arriving in Switzerland. Working on the farm—planting in spring, harvesting vegetables weekly, and sharing the bounty with 600 members—keeps me rooted in the community and committed to sustainable food production. This hands-on engagement reflects values central to my research: belonging, integration, and collective action toward meaningful change.
+        </p>
+        <p style="margin-top: 15px;">
+            Beyond the farm, I mentor PhD students through the HEC alumni program, supporting emerging scholars as they navigate their research journeys. I also pursue learning through creative expression, studying drumming with my teacher <a href="https://tekedum.com/" target="_blank" rel="noopener noreferrer">Tony Majdalani</a>, whose work explores the intersection of rhythm, technique, and artistic development. These pursuits—working the land, mentoring the next generation, and engaging with music—anchor my life outside academia.
+        </p>
+
+        <!-- Ortoloco Images Carousel -->
+        <div class="figures" style="margin-top: 30px;">
+            <div class="figure-carousel" id="carousel-ortoloco">
+                <div class="carousel-controls" style="margin-bottom: 15px;">
+                    <button class="carousel-btn" onclick="changeSlide('carousel-ortoloco', -1)">❮ Previous</button>
+                    <button class="carousel-btn" onclick="changeSlide('carousel-ortoloco', 1)">Next ❯</button>
+                </div>
+                
+                <div class="figure-container active">
+                    <img src="figures/ortoloco/collective-harvest.webp" alt="Collective Harvest">
+                    <div class="figure-caption">Collective Harvest (Photo: Ortoloco)</div>
+                </div>
+                <div class="figure-container">
+                    <img src="figures/ortoloco/from-soil-to-table.webp" alt="From Soil to Table">
+                    <div class="figure-caption">From Soil to Table</div>
+                </div>
+                <div class="figure-container">
+                    <img src="figures/ortoloco/spring-planting.jpg" alt="Spring Planting">
+                    <div class="figure-caption">Spring Planting</div>
+                </div>
+                <div class="figure-container">
+                    <img src="figures/ortoloco/ortoloco-farm-dietikon.jpg" alt="Ortoloco Farm, Dietikon">
+                    <div class="figure-caption">Ortoloco Farm, Dietikon (Photo: Ortoloco)</div>
+                </div>
+                
+                <div class="carousel-dots" id="carousel-ortoloco-dots" style="margin-top: 15px;">
+                    <span class="dot active" onclick="currentSlide('carousel-ortoloco', 0)"></span>
+                    <span class="dot" onclick="currentSlide('carousel-ortoloco', 1)"></span>
+                    <span class="dot" onclick="currentSlide('carousel-ortoloco', 2)"></span>
+                    <span class="dot" onclick="currentSlide('carousel-ortoloco', 3)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <p>© <span id="year"></span> Alessandra Stampi-Bombelli</p>
     </footer>
