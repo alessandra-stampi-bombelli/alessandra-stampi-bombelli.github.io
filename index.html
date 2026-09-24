@@ -371,7 +371,6 @@
                     <a href="#about">About</a>
                     <a href="#research">Research</a>
                     <a href="cv.html">CV</a>
-                    <a href="#contact">Contact</a>
                     <a href="#other-activities">Other Activities</a>
                 </nav>
                 <div class="contact-buttons">
@@ -579,15 +578,6 @@
 
     </section>
 
-    <section id="contact">
-        <h2>CONTACT</h2>
-        <p>
-            Email: alessandra.stampi-bombelli@uzh.ch<br>
-            Office: AND 5.74, Andreasstrasse 15, 8050 Zurich<br>
-            <a href="https://www.linkedin.com/in/astampi-bombelli/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        </p>
-    </section>
-
     <section id="other-activities">
         <h2>OTHER ACTIVITIES</h2>
         <p>
@@ -597,23 +587,46 @@
             Beyond the farm, I mentor master and PhD students through the <a href="https://www.alumnihec.ch/page/mentoring" target="_blank" rel="noopener noreferrer">HEC alumni program</a>, supporting emerging scholars in their research and career trajectories. I also pursue creative expression through video making, sewing, painting and music. Recently, I've begun drumming classes with Zurich-based teacher <a href="https://tekedum.com/" target="_blank" rel="noopener noreferrer">Tony Majdalani</a>, exploring music as a long-held passion.
         </p>
 
-        <!-- Ortoloco Images Grid -->
-        <div class="ortoloco-grid">
-            <figure style="margin: 0;">
-                <img src="figures/ortoloco/collective-harvest.webp" alt="Collective Harvest" style="width: 100%; height: 320px; object-fit: cover; border-radius: 4px; display: block;">
-                <figcaption style="font-size: 0.85em; color: #666; margin-top: 8px; text-align: center;">Photo: Ortoloco</figcaption>
-            </figure>
-            <figure style="margin: 0;">
-                <img src="figures/ortoloco/from-soil-to-table.webp" alt="From Soil to Table" style="width: 100%; height: 320px; object-fit: cover; border-radius: 4px; display: block;">
-            </figure>
-            <figure style="margin: 0;">
-                <img src="figures/ortoloco/spring-planting.jpg" alt="Spring Planting" style="width: 100%; height: 320px; object-fit: cover; border-radius: 4px; display: block;">
-            </figure>
-            <figure style="margin: 0;">
-                <img src="figures/ortoloco/ortoloco-farm-dietikon.jpg" alt="Ortoloco Farm, Dietikon" style="width: 100%; height: 320px; object-fit: cover; border-radius: 4px; display: block;">
-                <figcaption style="font-size: 0.85em; color: #666; margin-top: 8px; text-align: center;">Photo: Ortoloco</figcaption>
-            </figure>
+        <!-- Ortoloco Images Carousel -->
+        <div style="margin-top: 30px;">
+            <div class="figure-carousel" id="carousel-ortoloco">
+                <div class="carousel-controls" style="margin-bottom: 15px;">
+                    <button class="carousel-btn" onclick="changeSlide('carousel-ortoloco', -1)">❮ Previous</button>
+                    <button class="carousel-btn" onclick="changeSlide('carousel-ortoloco', 1)">Next ❯</button>
+                </div>
+                
+                <div class="figure-container active">
+                    <img src="figures/ortoloco/collective-harvest.webp" alt="Collective Harvest" style="max-width: 50%; height: auto; border: 1px solid #ddd; border-radius: 4px; margin: 0 auto; display: block;">
+                    <div class="figure-caption" style="font-size: 0.85em; color: #666; margin-top: 8px; text-align: center;">Photo: Ortoloco</div>
+                </div>
+                <div class="figure-container">
+                    <img src="figures/ortoloco/from-soil-to-table.webp" alt="From Soil to Table" style="max-width: 50%; height: auto; border: 1px solid #ddd; border-radius: 4px; margin: 0 auto; display: block;">
+                </div>
+                <div class="figure-container">
+                    <img src="figures/ortoloco/spring-planting.jpg" alt="Spring Planting" style="max-width: 50%; height: auto; border: 1px solid #ddd; border-radius: 4px; margin: 0 auto; display: block;">
+                </div>
+                <div class="figure-container">
+                    <img src="figures/ortoloco/ortoloco-farm-dietikon.jpg" alt="Ortoloco Farm, Dietikon" style="max-width: 50%; height: auto; border: 1px solid #ddd; border-radius: 4px; margin: 0 auto; display: block;">
+                    <div class="figure-caption" style="font-size: 0.85em; color: #666; margin-top: 8px; text-align: center;">Photo: Ortoloco</div>
+                </div>
+                
+                <div class="carousel-dots" id="carousel-ortoloco-dots" style="margin-top: 15px;">
+                    <span class="dot active" onclick="currentSlide('carousel-ortoloco', 0)"></span>
+                    <span class="dot" onclick="currentSlide('carousel-ortoloco', 1)"></span>
+                    <span class="dot" onclick="currentSlide('carousel-ortoloco', 2)"></span>
+                    <span class="dot" onclick="currentSlide('carousel-ortoloco', 3)"></span>
+                </div>
+            </div>
         </div>
+    </section>
+
+    <section id="contact">
+        <h2>CONTACT</h2>
+        <p>
+            Email: alessandra.stampi-bombelli@uzh.ch<br>
+            Office: AND 5.74, Andreasstrasse 15, 8050 Zurich<br>
+            <a href="https://www.linkedin.com/in/astampi-bombelli/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </p>
     </section>
 
     <footer>
